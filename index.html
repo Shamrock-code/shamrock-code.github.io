@@ -1,129 +1,88 @@
 <!DOCTYPE html>
-
-
 <html>
-	<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Shamrock</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <link rel="canonical" href="https://perso.ens-lyon/timothee.davidcleris">
 
-
-<style>
-body {margin:0;}
-ul {
-	
-	list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #FFFFFF;
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-li {
-    float: left;
-    border-right:1px solid #bbb;
-}
-li:last-child {
-    border-right: none;
-}
-li a {
-    display: block;
-    color: black;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-li a:hover:not(.active) {
-    background-color: #D8D8D8;
-}
-.active {
-    background-color: #4CAF50;
-}
-.page-content{padding:30px 0;background-color:#fff;}
-.wrap:before,
-.wrap:after{content:"";display:table;}
-.wrap:after{clear:both;}
-.wrap{max-width:1000px;padding:0 30px;margin:0 auto;zoom:1;}
-.post-content{margin:0 0 30px;}
-.post-content > *{margin:20px 0;}
-.post-content h1,
-.post-content h2,
-.post-content h3,
-.post-content h4,
-.post-content h5,
-.post-content h6{line-height:1;font-weight:300;margin:40px 0 20px;}
-.post-content h2{font-size:32px;letter-spacing:-1.25px;}
-.post-content h3{font-size:26px;letter-spacing:-1px;}
-.post-content h4{font-size:20px;letter-spacing:-1px;}
-.post-content blockquote{border-left:4px solid #e8e8e8;padding-left:20px;font-size:18px;opacity:.6;letter-spacing:-1px;margin:30px 0;}
-.post-content ul,
-.post-content ol{padding-left:20px;}
-.post pre,
-.post code{border:1px solid #d5d5e9;background-color:#eef;padding:8px 12px;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;font-size:15px;}
-.post .highlightglslvs pre,
-.post .highlightglslvs code{background-color:#fee;}
-.post .highlightglslfs pre,
-.post .highlightglslfs code{background-color:#efe;}
-.post code{padding:1px 0px;white-space:pre-wrap;}
-.post ul,
-.post ol{margin-left:1.35em;}
-.post pre code{border:none;}
-.post pre.terminal{border:1px solid #000;background-color:#333;color:#FFF;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
-.post pre.terminal code{background-color:#333;}
-body{font-family:Helvetica, Arial, sans-serif;font-size:16px;line-height:1.5;font-weight:300;background-color:#fdfdfd;}
-</style>
-
-
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
 
-
-<!body bgcolor="#000000">
 <body>
 
-<ul>
-  <li><a class="active" href="./index.html">Home</a></li>
-  <!-- <li><a href="./news.html">News</a></li>
-  <li><a href="./project.html">Projects</a></li>
-  <li><a href="./about.html">About</a></li> -->
-</ul>
+    <ul>
+        <li><a class="active" href="./index.html">Home</a></li>
+        <li><a href="./publications.html">Publications</a></li>
+        <li><a href="./project.html">Documentation</a></li>
+    </ul>
 
 </body>
 
 
 
 <div class="page-content">
-	<div class="wrap">
-		<div class="post">
+    <div class="wrap">
+        <div class="post">
             <p></p>
-		  <img src="logosham_white.png" width="550"><!--  width="85%">   -->
+            <img src="no_background_nocolor.png" width="550"><!--  width="85%">   -->
 
-			
-			<p>An astrophysical code for AMR & SPH on GPU clusters</p>
 
-      <hr>
+            <p>An astrophysical code for AMR & SPH on GPU clusters</p>
 
-      
-      
+            <hr>
 
-      <h1 id="description">Description</h1>
-<p>An general purpose code tu perform hydrodynamical simulations with various numerical methods.
-This code is platform agnostic, meaning that it can run on a laptop up to a multi-GPU cluster</p>
-<h2 id="status">Status</h2>
-<p>This code will be public when ready for production use</p>
 
-        
 
-      </p>
-	
-		</div>
-	</div>
+
+            <h1 id="description">Description</h1>
+            <p>An general purpose code tu perform hydrodynamical simulations with various numerical methods.
+                This code is platform agnostic, meaning that it can run on a laptop up to a multi-GPU cluster</p>
+            <h2 id="status">Status</h2>
+            <p>This code will be public when ready for production use</p>
+
+            
+            <table>
+                <tr>
+                    <th>MPI Layer</th>
+                    <th>✅</th> 
+                    <th></th> 
+                </tr>
+                <tr>
+                    <th>GPU Layer</th>
+                    <th>✅</th> 
+                    <th>(using <a href="https://www.khronos.org/sycl/">Sycl</a>)</th> 
+                </tr>
+                <tr>
+                    <th>SPH</th>
+                    <th>✅</th> 
+                    <td>gas, artificial viscosity</td>
+                </tr>
+                <tr>
+                    <th>Self-gravity</th>
+                    <th>✅</th> 
+                    <td>using FMM </td>
+                </tr>
+                <tr>
+                    <th>AMR</th>
+                    <td>WIP</td> 
+                    <td>basic module working</td>
+                </tr>
+              </table> 
+
+            </p>
+            <hr>
+            <footer> &copy; <a href="https://tdavidcl.github.io/index.html">Timothée David--Cléris</a> 2020 -- 2023</footer>
+
+
+        </div>
+    </div>
 </div>
 
 </html>

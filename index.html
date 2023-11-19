@@ -5,26 +5,37 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Shamrock</title>
+    <title>Timothée David--Cléris</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <link rel="canonical" href="https://perso.ens-lyon/timothee.davidcleris">
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="latexcss.css">
 
 </head>
 
-
 <body>
 
-    <ul>
-        <li><a class="active" href="./index.html">Home</a></li>
-        <li><a href="./publications.html">Publications</a></li>
-        <li><a href="./project.html">Documentation</a></li>
-    </ul>
+<body>
+<header class="site-header">
 
+  <div class="wrapper">
+
+    <a  class="site-title" href="/">Shamrock</a>
+
+    <nav class="site-nav">
+
+      <div class="trigger">
+        <a class="page-link" href="./publications.html">Publications</a>
+        <a class="page-link" href="./documentation.html">Documentation</a>
+    
+      </div>
+    </nav>
+
+  </div>
+</header>
 </body>
-
 
 
 <div class="page-content">
@@ -44,40 +55,23 @@
             <h1 id="description">Description</h1>
             <p>An general purpose code tu perform hydrodynamical simulations with various numerical methods.
                 This code is platform agnostic, meaning that it can run on a laptop up to a multi-GPU cluster</p>
+            <p>The code works using MPI with <a href="https://www.khronos.org/sycl/">Sycl</a> </p>
             <h2 id="status">Status</h2>
-            <p>This code will be public when ready for production use</p>
+            <p>First paper comming soon, here is a small teaser</p>
 
             
-            <table>
-                <tr>
-                    <th>MPI Layer</th>
-                    <th>✅</th> 
-                    <th></th> 
-                </tr>
-                <tr>
-                    <th>GPU Layer</th>
-                    <th>✅</th> 
-                    <th>(using <a href="https://www.khronos.org/sycl/">Sycl</a>)</th> 
-                </tr>
-                <tr>
-                    <th>SPH</th>
-                    <th>✅</th> 
-                    <td>gas, artificial viscosity</td>
-                </tr>
-                <tr>
-                    <th>Self-gravity</th>
-                    <th>✅</th> 
-                    <td>using FMM </td>
-                </tr>
-                <tr>
-                    <th>AMR</th>
-                    <td>WIP</td> 
-                    <td>basic module working</td>
-                </tr>
-              </table> 
+            <div class="profile-picdiv">
+                A protoplanetary disc with a planet :
+                <img class="picture-round" src="disc.png">
+            <div class="profile-picdiv">
+                
+            </div>
+                Lense-thiring precesion :
+                <img class="picture-round" src="bardeen.png">
+            </div>
+            
 
-            </p>
-            <hr>
+
             <footer> &copy; <a href="https://tdavidcl.github.io/index.html">Timothée David--Cléris</a> 2020 -- 2023</footer>
 
 

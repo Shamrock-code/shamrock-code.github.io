@@ -1,106 +1,274 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Timothée David--Cléris</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <link rel="canonical" href="https://perso.ens-lyon/timothee.davidcleris">
-
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="latexcss.css">
-
+    <title>Shamrock - Multi-GPU Hydrodynamics Framework</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body>
-
-<header class="site-header">
-
-  <div class="wrapper">
-
-    <a  class="site-title" href="/">
-        <img class="site-title-pic" src="no_background_nocolor.png">
-    </a>
-
-    <nav class="site-nav">
-
-      <div class="trigger">
-        <a class="page-link" href="./publications.html">Publications</a>
-        <a class="page-link" href="./documentation.html">Documentation</a>
-    
-      </div>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="_static/logo.png" alt="Shamrock Logo" class="logo">
+                <span class="logo-text">Shamrock</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="https://github.com/Shamrock-code/Shamrock" class="github-btn">
+                    <i class="fab fa-github"></i> GitHub
+                </a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
     </nav>
 
-  </div>
-</header>
-
-
-<div class="page-content">
-    <div class="wrap">
-        <div class="post">
-            <p></p>
-            <img class="centered" src="no_background_nocolor.png" width="550"><!--  width="85%">   -->
-
-
-            <p>An astrophysical code for AMR & SPH on GPU clusters</p>
-
-            <hr>
-
-            <h1 id="description">Description</h1>
-            <p>An general purpose code tu perform hydrodynamical simulations with various numerical methods.
-                This code is platform agnostic, meaning that it can run on a laptop up to a multi-GPU cluster</p>
-            <p>The code works using MPI with <a href="https://www.khronos.org/sycl/">SYCL</a> </p>
-
-            <hr>
-            
-            <h1 id="description">Download the code</h1>
-            <p> On Github : <a href="https://github.com/Shamrock-code/Shamrock">Link</a></p>
-
-            <hr>
-            
-            <h1 id="description">Documentation</h1>
-
-            <p> Shamrock documentation : <a href="https://shamrock-code.github.io/Shamrock/mkdocs/index.html">Link</a></p>
-            <p> C++ API documentation : <a href="https://shamrock-code.github.io/Shamrock/doxygen/index.html">Link</a></p>
-            <p> Python module documentation : <a href="https://shamrock-code.github.io/Shamrock/sphinx/index.html">Link</a></p>
-            
-            <hr>
-
-            <h2 id="status">Status</h2>
-            <p>First paper accepted in MNRAS (see <a href="./publications.html">Publications</a>)</p>
-
-            <hr>
-            <h2 id="status">Exemple of simulations</h2>
-            
-            
-            <div style="width: 80%; margin: 0px auto;">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/hXw8xORKCLc?si=7MVpK9LSfAJbsYK2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-            
-            <div>
-                A protoplanetary disc with a planet :
-                <div style="width: 70%; margin: 0px auto;">
-                  <img class="picture-round" src="disc.png">
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    An open-source, <span class="gradient-text">multi-GPU hydrodynamics framework</span> for astrophysics
+                </h1>
+                <p class="hero-subtitle">
+                    Shamrock is a general-purpose HPC hydrodynamics simulation code focused on astrophysical applications. 
+                    The entire codebase is written in C++17, with all accelerated components implemented using SYCL, which can be compiled 
+                    directly to native CUDA, ROCm, OpenMP, OpenCL, and more. Shamrock also supports multiple GPUs and 
+                    heterogeneous clusters using MPI.
+                </p>
+                <div class="hero-buttons">
+                    <a href="https://shamrock-code.github.io/Shamrock/mkdocs/usermanual/quickstart/" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i> Get Started
+                    </a>
+                    <a href="#quick-links" class="btn btn-secondary">
+                        <i class="fas fa-book"></i> Documentation
+                    </a>
                 </div>
             </div>
+            <div class="hero-image">
+                <img src="_static/no_background_nocolor.png" alt="Shamrock Banner" class="banner">
                 
-            <div>
-                Lense-thiring precesion :
-                <div style="width: 70%; margin: 0px auto;">
-                <img class="picture-round" src="bardeen.png">
-              </div>
+                <!-- Rotating Image Gallery -->
+                <div class="rotating-gallery">
+                    <div class="gallery-container">
+                        <div class="gallery-slide active">
+                            <img src="_static/rolling_pics/disc.png" alt="Disc Simulation" class="gallery-image">
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="_static/rolling_pics/bardeen.png" alt="Bardeen Simulation" class="gallery-image">
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="_static/rolling_pics/1gcircum.png" alt="Circumstellar Simulation" class="gallery-image">
+                        </div>
+                        <div class="gallery-indicators">
+                            <span class="indicator active" data-slide="0"></span>
+                            <span class="indicator" data-slide="1"></span>
+                            <span class="indicator" data-slide="2"></span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            
-
-
-            <footer> &copy; <a href="https://tdavidcl.github.io/index.html">Timothée David--Cléris</a> 2020 -- 2023</footer>
-
-
         </div>
-    </div>
-</div>
+    </section>
 
-</html>
+    <!-- Quick Links -->
+    <section id="quick-links" class="quick-links">
+        <div class="container">
+            <div class="quick-links-grid">
+                <a href="https://shamrock-code.github.io/Shamrock/mkdocs/" class="quick-link-card">
+                    <i class="fas fa-book"></i>
+                    <h3>Main Documentation</h3>
+                    <p>Comprehensive user documentation and guides</p>
+                </a>
+                <a href="https://shamrock-code.github.io/Shamrock/sphinx/index.html" class="quick-link-card">
+                    <i class="fab fa-python"></i>
+                    <h3>Python Module Doc</h3>
+                    <p>Python bindings documentation and examples</p>
+                </a>
+                <a href="https://shamrock-code.github.io/Shamrock/sphinx/_as_gen/index.html" class="quick-link-card">
+                    <i class="fas fa-code"></i>
+                    <h3>Examples</h3>
+                    <p>Browse through practical examples and use cases</p>
+                </a>
+                <a href="https://github.com/Shamrock-code/Shamrock" class="quick-link-card">
+                    <i class="fab fa-github"></i>
+                    <h3>GitHub Repo</h3>
+                    <p>Source code, issues, and contributions</p>
+                </a>
+                <a href="https://shamrock-code.github.io/Shamrock/doxygen/" class="quick-link-card">
+                    <i class="fas fa-cogs"></i>
+                    <h3>C++ API</h3>
+                    <p>Complete C++ API documentation and reference</p>
+                </a>
+                <a href="https://shamrock-code.github.io/Shamrock/sphinx/api.html" class="quick-link-card">
+                    <i class="fab fa-python"></i>
+                    <h3>Python API</h3>
+                    <p>Complete Python API documentation and reference</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon purple">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>Multi-GPU Support</h3>
+                    <p>Scale seamlessly from laptops to exascale supercomputers with native multi-GPU and heterogeneous cluster support using MPI.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon lime">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h3>Multi-methods</h3>
+                    <p>Support for multiple hydrodynamics solvers including both grid-based and particle-based methods for comprehensive astrophysical simulations.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon teal">
+                        <i class="fas fa-atom"></i>
+                    </div>
+                    <h3>Astrophysical Focus</h3>
+                    <p>Specialized for astrophysical applications with support for SPH, AMR, and other advanced hydrodynamics methods.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon blue">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>SYCL Acceleration</h3>
+                    <p>All accelerated components use SYCL, compiled directly to native CUDA, ROCm, OpenMP, OpenCL, and more for maximum performance.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon green">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Modern C++17</h3>
+                    <p>Built with modern C++17 standards, providing robust performance and maintainable code for scientific computing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Start Section -->
+    <section id="quickstart" class="quickstart">
+        <div class="container">
+            <h2 class="section-title">Quick Start</h2>
+            <div class="quickstart-content">
+                <div class="quickstart-card">
+                    <div class="quickstart-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Ready to Get Started?</h3>
+                    <p>Follow our comprehensive quickstart guide to install Shamrock and run your first hydrodynamics simulation. The guide covers installation, device selection, and basic usage patterns.</p>
+                    <a href="https://shamrock-code.github.io/Shamrock/mkdocs/usermanual/quickstart/" class="btn btn-primary">
+                        <i class="fas fa-external-link-alt"></i> View Quickstart Guide
+                    </a>
+                </div>
+                <div class="quickstart-features">
+                    <div class="quickstart-feature">
+                        <i class="fas fa-download"></i>
+                        <h4>Installation</h4>
+                        <p>Multiple installation methods: from source, Spack, Homebrew, or Docker</p>
+                    </div>
+                    <div class="quickstart-feature">
+                        <i class="fas fa-microchip"></i>
+                        <h4>Device Selection</h4>
+                        <p>Choose between GPU and CPU devices with our device management system</p>
+                    </div>
+                    <div class="quickstart-feature">
+                        <i class="fas fa-terminal"></i>
+                        <h4>Multiple Modes</h4>
+                        <p>Use Shamrock as an Python interpreter, Python package, or in Jupyter notebooks</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Section -->
+    <section id="community" class="community">
+        <div class="container">
+            <h2 class="section-title">Community</h2>
+            <div class="community-content">
+                <div class="community-links">
+                    <!--<a href="https://github.com/Shamrock-code/Shamrock" class="community-card">
+                        <i class="fab fa-github"></i>
+                        <h3>GitHub</h3>
+                        <p>Source code, issues, and contributions</p>
+                    </a>-->
+                    <a href="https://discord.gg/Q69s5buyr5" class="community-card">
+                        <i class="fab fa-discord"></i>
+                        <h3>Discord</h3>
+                        <p>Join our community and get help</p>
+                    </a>
+                    <a href="https://github.com/Shamrock-code/Shamrock/discussions" class="community-card">
+                        <i class="fas fa-comments"></i>
+                        <h3>Discussions</h3>
+                        <p>Ask questions and share ideas</p>
+                    </a>
+                </div>
+                <div class="cta-section">
+                    <h3>Join the Shamrock Project</h3>
+                    <p>Contribute by reporting issues, suggesting features, or contributing code</p>
+                    <a href="https://github.com/Shamrock-code/Shamrock" class="btn btn-primary">
+                        <i class="fab fa-github"></i> Contribute to Shamrock
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="_static/logo.png" alt="Shamrock Logo" class="footer-logo-img">
+                        <span>Shamrock</span>
+                    </div>
+                    <p>An open-source, multi-GPU hydrodynamics framework for astrophysics. Scales seamlessly from laptops to exascale supercomputers.</p>
+                    <div class="social-links">
+                        <a href="https://github.com/Shamrock-code/Shamrock" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://discord.gg/Q69s5buyr5" aria-label="Discord">
+                            <i class="fab fa-discord"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <!--
+                    <h4>Documentation</h4>
+                    <ul>
+                        <li><a href="https://shamrock-code.github.io/Shamrock/mkdocs/usermanual/quickstart/">Quick Start</a></li>
+                        <li><a href="https://shamrock-code.github.io/Shamrock/mkdocs/usermanual/install/">Installation</a></li>
+                        <li><a href="https://shamrock-code.github.io/Shamrock/mkdocs/usermanual/usage/">User Manual</a></li>
+                        <li><a href="https://shamrock-code.github.io/Shamrock/mkdocs/usermanual/first_simulation/">First Simulation</a></li>
+                    </ul>
+                    -->
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Shamrock. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

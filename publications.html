@@ -1,83 +1,153 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Timothée David--Cléris</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <link rel="canonical" href="https://perso.ens-lyon/timothee.davidcleris">
-
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="latexcss.css">
-
+    <title>Publications - Shamrock</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body>
-
-<body>
-<header class="site-header">
-
-  <div class="wrapper">
-
-    <a  class="site-title" href="/">
-        <img class="site-title-pic" src="no_background_nocolor.png">
-    </a>
-
-    <nav class="site-nav">
-
-      <div class="trigger">
-        <a class="page-link" href="./publications.html">Publications</a>
-        <a class="page-link" href="./documentation.html">Documentation</a>
-    
-      </div>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="_static/logo.png" alt="Shamrock Logo" class="logo">
+                <span class="logo-text">Shamrock</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="https://github.com/Shamrock-code/Shamrock" class="github-btn">
+                    <i class="fab fa-github"></i> GitHub
+                </a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
     </nav>
 
-  </div>
-</header>
-</body>
-
-
-
-<div class="page-content">
-    <div class="wrap">
-        <div class="post">
-            
-            <h1 id="description">Publications</h1>
-
-            <hr>
-
-            <h2>Accepted</h2>
-
-            <ol class="publications reverse">
-              <li>
-                  <p class="title">The Shamrock code: I- Smoothed Particle Hydrodynamics on GPUs.</p>
-                  <p class="coauthors">with <a href="https://www.ens-lyon.fr/recherche/panorama-de-la-recherche/prix-et-distinctions/guillaume-laibe-astrophysicien-cral">Guillaume Laibe</a> and Yona Lapyere.</p>
-                  <p class="journal">accepted for publication in MNRAS, </p>
-                  <p class="badges">
-                      <span class="id"><a href="https://arxiv.org/abs/2503.09713"><span class="id-type id-arxiv">arXiv</span><span class="id-key">2503.09713</span></a></span>
-                  </p>
-              </li>
-              <li>
-                  <p class="title">Shamrock: Exascale hydrodynamics for astrophysics using SYCL.</p>
-                  <p class="journal">Proceding accepted for <a href="https://www.iwocl.org/">IOWCL2025</a>.</p>
-              </li>
-            </ol>
-
-            <h2>Published</h2>
-
-            <p>None for now 😉</p>
-
+    <!-- Publications Hero -->
+    <section class="publications-hero">
+        <div class="container">
+            <h1 class="publications-title">Publications</h1>
+            <p class="publications-subtitle">
+                Research papers and publications related to the Shamrock framework for astrophysical hydrodynamics
             </p>
-
-            <hr>
-            <footer> &copy; <a href="https://tdavidcl.github.io/index.html">Timothée David--Cléris</a> 2020 -- 2025</footer>
-
-
         </div>
-    </div>
-</div>
+    </section>
 
-</html>
+    <!-- Publications List -->
+    <section class="publications-list">
+        <div class="container">
+            <div class="publication-card">
+                <div class="publication-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="publication-content">
+                    <h3>Numerical planet formation on exascale architectures</h3>
+                    <p class="publication-authors">T. David--Cléris</p>
+                    <p class="publication-type">PhD Thesis</p>
+                    <p class="publication-abstract">
+                        Numerical simulations are essential to our understanding of star and planet formation. They imply processes being multi-physics, complex, multi-scale, out of equilibrium, and non linear. Recently, the computing power of supercomputer in- creased up to the exascale, namely a quintillion operations per seconds. In principle, this computing power makes it possible to resolve crucial questions about planet formation, thanks to simulations of unprecedented accuracy. To achieve this, it is necessary to develop code based on algorithms capable of taking advantage of this new computing power. The aim of this thesis is to develop Shamrock, the first astrophysical code with exascale multi-methods (particles or adaptive grids). The core of this work is the adaptation and optimization of a binary algorithm for finding randomly distributed neighbors, which is fully parallelizable on architectures using graphics cards. In its current version, Shamrock achieves a parallel efficiency of over 90% for a Sedov test performed with the Smoothed Particle Hydrodynamics (SPH) method on 1024 nodes, enabling the first simulations with 65 billion particles to be carried out in 7 seconds per time step.
+                    </p>
+                    <div class="publication-meta">
+                        <span class="publication-date">September 2024</span>
+                        <span class="publication-institution">École normale supérieure de Lyon</span>
+                    </div>
+                    <a href="https://theses.fr/2024ENSL0053" class="btn btn-primary" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> View Thesis
+                    </a>
+                </div>
+            </div>
+
+            <div class="publication-card">
+                <div class="publication-icon">
+                    <i class="fas fa-microscope"></i>
+                </div>
+                <div class="publication-content">
+                    <h3>The SHAMROCK code: I - smoothed particle hydrodynamics on GPUs</h3>
+                    <p class="publication-authors">T. David--Cléris, G. Laibe, Y. Lapeyre</p>
+                    <p class="publication-type">Journal Article</p>
+                    <p class="publication-abstract">
+                        We present SHAMROCK, a performance portable framework developed in C++ 17 with the SYCL programming standard, tailored for numerical astrophysics on Exascale architectures. The core of SHAMROCK is an accelerated parallel tree with negligible construction time, whose efficiency is based on binary algebra. The smoothed particle hydrodynamics algorithm of the PHANTOM code is implemented in SHAMROCK. On-the-fly tree construction circumvents the necessity for extensive data communications. In tests displaying a uniform density with global time-stepping with tens of billions of particles, SHAMROCK completes a single time-step in a few seconds using over the thousand of GPUs of a supercomputer. This corresponds to processing billions of particles per second, with tens of millions of particles per GPU. The parallel efficiency across the entire cluster is larger than ~90 per cent .
+                    </p>
+                    <div class="publication-meta">
+                        <span class="publication-date">May 2025</span>
+                        <span class="publication-journal">Monthly Notices of the Royal Astronomical Society</span>
+                    </div>
+                    <a href="https://ui.adsabs.harvard.edu/abs/2025MNRAS.539....1D/abstract" class="btn btn-primary" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> View Paper
+                    </a>
+                </div>
+            </div>
+
+            <div class="publication-card">
+                <div class="publication-icon">
+                    <i class="fas fa-server"></i>
+                </div>
+                <div class="publication-content">
+                    <h3>Shamrock: Exascale hydrodynamics for astrophysics using SYCL.</h3>
+                    <p class="publication-authors">T. David--Cléris</p>
+                    <p class="publication-type">Conference Paper</p>
+                    <p class="publication-abstract">
+                        We present Shamrock, a native SYCL framework for astrophysics, designed to implement various numerical methods for modelling hydrodynamic flows, in particular Smoothed Particle Hydrodynamics (SPH). At the core of Shamrock lies a fast radix tree building algorithm that allows the tree to be rebuilt at each timestep with minimal cost, eliminating the need for tree communications or updates. Additionally, a domain decomposition method is used on top of the radix tree, allowing for a nearly linear multi-GPU weak scalability, resulting in 92% weak scaling efficiency on 1024 Mi250x AMD graphical accelerators for large SPH simulations.
+                    </p>
+                    <div class="publication-meta">
+                        <span class="publication-date">2025</span>
+                        <span class="publication-journal">ACM International Conference on Supercomputing</span>
+                    </div>
+                    <a href="https://dl.acm.org/doi/10.1145/3731125.3731128" class="btn btn-primary" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> View Paper
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="_static/logo.png" alt="Shamrock Logo" class="footer-logo-img">
+                        <span>Shamrock</span>
+                    </div>
+                    <p>An open-source, multi-GPU hydrodynamics framework for astrophysics. Scales seamlessly from laptops to exascale supercomputers.</p>
+                    <div class="social-links">
+                        <a href="https://github.com/Shamrock-code/Shamrock" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://discord.gg/Q69s5buyr5" aria-label="Discord">
+                            <i class="fab fa-discord"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <!--
+                    <h4>Documentation</h4>
+                    <ul>
+                        <li><a href="https://shamrock-code.github.io/Shamrock/mkdocs/usermanual/quickstart/">Quick Start</a></li>
+                        <li><a href="https://shamrock-code.github.io/Shamrock/mkdocs/usermanual/install/">Installation</a></li>
+                        <li><a href="https://shamrock-code.github.io/Shamrock/mkdocs/usermanual/usage/">User Manual</a></li>
+                        <li><a href="https://shamrock-code.github.io/Shamrock/mkdocs/usermanual/first_simulation/">First Simulation</a></li>
+                    </ul>
+                    -->
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Shamrock. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

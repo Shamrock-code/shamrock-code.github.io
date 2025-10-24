@@ -325,6 +325,87 @@ body {
     background: rgba(255, 255, 255, 0.8);
 }
 
+/* Performance Records */
+.performance {
+    padding: var(--spacing-2xl) 0;
+    background: var(--light-gray);
+}
+
+.performance-table-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--white);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+}
+
+.performance-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: var(--font-size-base);
+}
+
+.performance-table thead {
+    background: var(--gradient-primary);
+    color: var(--white);
+}
+
+.performance-table thead th {
+    color: var(--white) !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.performance-table th {
+    padding: var(--spacing-lg);
+    text-align: left;
+    font-weight: 600;
+    font-size: var(--font-size-lg);
+}
+
+.performance-table td {
+    padding: var(--spacing-lg);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    color: var(--dark-gray);
+    vertical-align: top;
+}
+
+.performance-table tbody tr:hover {
+    background: rgba(68, 1, 84, 0.05);
+}
+
+.performance-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.performance-table td:first-child,
+.performance-table th:first-child {
+    font-weight: 600;
+    color: var(--primary-purple);
+    width: 25%;
+}
+
+.performance-table td:nth-child(2),
+.performance-table th:nth-child(2) {
+    font-style: italic;
+    color: var(--gray);
+    width: 25%;
+    text-align: center;
+}
+
+.performance-table td:nth-child(3) {
+    font-weight: 500;
+    color: var(--dark-gray);
+    width: 30%;
+}
+
+.performance-table td:nth-child(4) {
+    font-weight: 600;
+    color: var(--teal);
+    text-align: center;
+    width: 25%;
+}
+
 /* Quick Links */
 .quick-links {
     padding: var(--spacing-2xl) 0;
@@ -807,6 +888,16 @@ body {
     .container {
         padding: 0 var(--spacing-sm);
     }
+    
+    .performance-table-container {
+        margin: 0 var(--spacing-sm);
+    }
+    
+    .performance-table th,
+    .performance-table td {
+        padding: var(--spacing-md);
+        font-size: var(--font-size-sm);
+    }
 }
 
 @media (max-width: 480px) {
@@ -837,6 +928,16 @@ body {
     
     .community-links {
         grid-template-columns: 1fr;
+    }
+    
+    .performance-table th,
+    .performance-table td {
+        padding: var(--spacing-sm);
+        font-size: var(--font-size-sm);
+    }
+    
+    .performance-table th {
+        font-size: var(--font-size-base);
     }
 }
 

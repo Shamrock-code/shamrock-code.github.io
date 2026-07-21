@@ -92,6 +92,27 @@
 
             <div class="publication-card">
                 <div class="publication-icon">
+                    <i class="fas fa-microscope"></i>
+                </div>
+                <div class="publication-content">
+                    <h3>A highly accurate drag solver for multi-fluid dust and gas hydrodynamics on GPUs</h3>
+                    <p class="publication-authors">L. Sewanou, G. Laibe, B. Commerçon</p>
+                    <p class="publication-type">Journal Article</p>
+                    <p class="publication-abstract">
+                        Exascale supercomputing unleashes the potential for simulations of astrophysical systems with unprecedented resolution. Taking full advantage of this computing power requires the development of new algorithms and numerical methods that are GPU friendly and scalable. In the context of multi-fluid dust-gas dynamics, we propose a highly accurate algorithm that is specifically designed for GPUs. We developed a multi-fluid gas-dust algorithm capable of computing friction terms on GPU architectures to machine precision, with the constraint for the drag-time step to remain a fraction of the global hydrodynamic time step for computational efficiency in practice. We present a scaling-and-squaring algorithm tailored to modern architectures for computing the exponential of the drag matrix, enabling high accuracy in friction calculations across relevant astrophysical regimes. The algorithm was validated through the Dustybox, Dustywave, and Dustyshock tests. The algorithm was implemented and tested in two multi-GPU codes with different architectures and GPU programming models: Dyablo, an adaptive mesh refinement code based on the Kokkos library, and Shamrock, a multi-method code based on Sycl. On current architectures, the friction computation remains acceptable for both codes (below the typical hydro time step) up to 16 species, enabling a further implementation of growth and fragmentation. This algorithm might be applied to other physical processes, such as radiative transfer or chemistry.
+                    </p>
+                    <div class="publication-meta">
+                        <span class="publication-date">November 2025</span>
+                        <span class="publication-journal">Astronomy and Astrophysics</span>
+                    </div>
+                    <a href="https://ui.adsabs.harvard.edu/abs/2025A%26A...703A..59S/abstract" class="btn btn-primary" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> View Paper
+                    </a>
+                </div>
+            </div>
+
+            <div class="publication-card">
+                <div class="publication-icon">
                     <i class="fas fa-server"></i>
                 </div>
                 <div class="publication-content">

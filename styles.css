@@ -1232,6 +1232,17 @@ body.loaded {
     opacity: 0.7;
 }
 
+.talk-conference a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.talk-conference a:hover {
+    color: var(--primary-purple);
+    opacity: 1;
+}
+
 .talk-session {
     font-size: 0.95rem;
     color: var(--gray);

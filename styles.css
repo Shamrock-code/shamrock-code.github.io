@@ -1336,6 +1336,10 @@ body.loaded {
     background: var(--light-gray);
 }
 
+.sponsors .section-title {
+    margin-bottom: var(--spacing-md);
+}
+
 .sponsors-intro {
     text-align: center;
     color: var(--gray);
@@ -1344,53 +1348,116 @@ body.loaded {
     line-height: 1.6;
 }
 
-.sponsors-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: var(--spacing-lg);
+.sponsor-group + .sponsor-group {
+    margin-top: var(--spacing-xl);
 }
 
-.sponsor-card {
-    display: flex;
-    align-items: center;
+.sponsor-group-title {
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--primary-purple);
+    margin-bottom: var(--spacing-sm);
+}
+
+.sponsor-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: var(--spacing-md);
-    max-width: 480px;
+}
+
+.sponsor-grid-single {
+    grid-template-columns: minmax(0, 380px);
+}
+
+.sponsor-tile {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    min-width: 0;
     background: var(--white);
-    padding: var(--spacing-lg);
+    padding: var(--spacing-md);
     border-radius: var(--border-radius-lg);
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    text-decoration: none;
-    color: var(--dark-gray);
+    border: 1px solid rgba(0, 0, 0, 0.08);
     transition: var(--transition);
 }
 
-.sponsor-card:hover {
-    transform: translateY(-4px);
+.sponsor-tile:hover {
     box-shadow: var(--shadow-lg);
     border-color: var(--primary-purple);
 }
 
-.sponsor-logo {
-    width: 72px;
-    height: 72px;
-    flex-shrink: 0;
-}
-
-.sponsor-text h3 {
-    font-size: var(--font-size-xl);
-    font-weight: 600;
+.sponsor-logo-plate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    height: 96px;
     margin-bottom: var(--spacing-xs);
+    padding: var(--spacing-xs);
+    background: var(--white);
 }
 
-.sponsor-text p {
+.sponsor-logo-plate img {
+    max-height: 72px;
+    max-width: 100%;
+    min-width: 0;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+.sponsor-tile h4 {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+}
+
+.sponsor-tile h4 a {
+    color: var(--dark-gray);
+    text-decoration: none;
+}
+
+.sponsor-tile h4 a:hover {
+    color: var(--primary-purple);
+}
+
+.sponsor-tile p {
     color: var(--gray);
+    font-size: var(--font-size-sm);
     line-height: 1.6;
 }
 
-@media (max-width: 480px) {
-    .sponsor-card {
-        flex-direction: column;
-        text-align: center;
-    }
+.sponsor-tile p a {
+    color: inherit;
+    text-underline-offset: 2px;
+}
+
+.sponsor-grants {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin-top: var(--spacing-xs);
+    padding-top: var(--spacing-xs);
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    font-size: var(--font-size-sm);
+}
+
+.sponsor-grants li {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--spacing-sm);
+    flex-wrap: wrap;
+}
+
+.sponsor-grants a {
+    color: var(--primary-purple);
+    font-weight: 500;
+    text-underline-offset: 2px;
+}
+
+.sponsor-grants span {
+    color: var(--gray);
+    font-variant-numeric: tabular-nums;
 }

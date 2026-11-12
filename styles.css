@@ -1317,3 +1317,80 @@ body.loaded {
         padding: 2rem 0;
     }
 } 
+/* Image icons (logos not available in Font Awesome) */
+.community-card-img {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: block;
+    margin: 0 auto var(--spacing-md);
+}
+
+.social-icon-img {
+    width: 22px;
+    height: 22px;
+}
+
+/* Sponsors Section */
+.sponsors {
+    padding: var(--spacing-2xl) 0;
+    background: var(--light-gray);
+}
+
+.sponsors-intro {
+    text-align: center;
+    color: var(--gray);
+    max-width: 600px;
+    margin: 0 auto var(--spacing-xl);
+    line-height: 1.6;
+}
+
+.sponsors-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-lg);
+}
+
+.sponsor-card {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    max-width: 480px;
+    background: var(--white);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-lg);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: var(--dark-gray);
+    transition: var(--transition);
+}
+
+.sponsor-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-purple);
+}
+
+.sponsor-logo {
+    width: 72px;
+    height: 72px;
+    flex-shrink: 0;
+}
+
+.sponsor-text h3 {
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    margin-bottom: var(--spacing-xs);
+}
+
+.sponsor-text p {
+    color: var(--gray);
+    line-height: 1.6;
+}
+
+@media (max-width: 480px) {
+    .sponsor-card {
+        flex-direction: column;
+        text-align: center;
+    }
+}

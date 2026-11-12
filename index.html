@@ -104,14 +104,14 @@
                     <tbody>
                         <tr>
                             <td>SPH (Multi-GPU)</td>
-                            <td>Aurora<br>(24k GPU tiles)</td>
-                            <td>223,287,132,071<br>particles per second</td>
-                            <td>82.9%</td>
+                            <td>Aurora<br>(98k GPU tiles)</td>
+                            <td>670,066,242,989<br>particles per second</td>
+                            <td>75.9%</td>
                         </tr>
                         <tr>
                             <td>SPH (Single GPU)</td>
                             <td>H100 SXM5</td>
-                            <td>20,000,000<br>particles per second</td>
+                            <td>25,502,055<br>particles per second</td>
                             <td>—</td>
                         </tr>
                     </tbody>
@@ -195,8 +195,15 @@
                     <div class="feature-icon green">
                         <i class="fas fa-code"></i>
                     </div>
-                    <h3>Modern C++17</h3>
-                    <p>Built with modern C++17 standards, providing robust performance and maintainable code for scientific computing.</p>
+                    <h3>Modern C++20</h3>
+                    <p>Built with modern C++20 standards, providing robust performance and maintainable code for scientific computing.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon purple">
+                        <i class="fas fa-equals"></i>
+                    </div>
+                    <h3>Deterministic</h3>
+                    <p>Multiple runs of the same simulation on the same hardware always give bitwise-identical results.</p>
                 </div>
             </div>
         </div>
@@ -249,6 +256,11 @@
                         <h3>GitHub</h3>
                         <p>Source code, issues, and contributions</p>
                     </a>-->
+                    <a href="https://shamrock-code.zulipchat.com" class="community-card">
+                        <img src="_static/sponsors/zulip-icon-circle.svg" alt="Zulip logo" class="community-card-img">
+                        <h3>Zulip</h3>
+                        <p>Join our community and get help</p>
+                    </a>
                     <a href="https://discord.gg/Q69s5buyr5" class="community-card">
                         <i class="fab fa-discord"></i>
                         <h3>Discord</h3>
@@ -271,6 +283,119 @@
         </div>
     </section>
 
+    <!-- Board Section -->
+    <section id="board" class="board">
+        <div class="container">
+            <h2 class="section-title">Board</h2>
+            <div class="board-grid">
+                <div class="board-group">
+                    <h3 class="board-group-title">Lead</h3>
+                    <ul class="board-members">
+                        <li><a href="https://tdavidcl.github.io/" target="_blank" rel="noopener">Timothée David--Cléris <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+                <div class="board-group">
+                    <h3 class="board-group-title">Scientific committee</h3>
+                    <ul class="board-members">
+                        <li><a href="https://perso.ens-lyon.fr/guillaume.laibe/" target="_blank" rel="noopener">Guillaume Laibe <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a></li>
+                        <li><a href="https://cv.hal.science/benoit-commercon" target="_blank" rel="noopener">Benoît Commerçon <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a></li>
+                        <li>Thomas Guillet</li>
+                    </ul>
+                </div>
+                <div class="board-group">
+                    <h3 class="board-group-title">Technical committee</h3>
+                    <ul class="board-members">
+                        <li>Yona B. Lapeyre</li>
+                        <li>Léodasce Sewanou</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sponsors Section -->
+    <section id="sponsors" class="sponsors">
+        <div class="container">
+            <h2 class="section-title">Sponsors</h2>
+            <p class="sponsors-intro">Shamrock is developed with the support of the following funders, institutions and services.</p>
+
+            <div class="sponsor-group">
+                <h3 class="sponsor-group-title">Funding</h3>
+                <div class="sponsor-grid">
+                    <div class="sponsor-tile">
+                        <a href="https://erc.europa.eu/" class="sponsor-logo-plate" target="_blank" rel="noopener">
+                            <img src="_static/sponsors/erc.png" alt="European Research Council logo">
+                        </a>
+                        <h4><a href="https://erc.europa.eu/" target="_blank" rel="noopener">European Research Council</a></h4>
+                        <p>Funding under the European Union's Horizon 2020 and Horizon Europe research and innovation programmes.</p>
+                        <ul class="sponsor-grants">
+                            <li><a href="https://cordis.europa.eu/project/id/864965" target="_blank" rel="noopener">ERC CoG PODCAST</a> <span>No 864965</span></li>
+                            <li><a href="https://cordis.europa.eu/project/id/101053020" target="_blank" rel="noopener">Dust2Planets</a> <span>No 101053020</span></li>
+                        </ul>
+                    </div>
+                    <div class="sponsor-tile">
+                        <a href="https://pepr-origins.fr/" class="sponsor-logo-plate" target="_blank" rel="noopener">
+                            <img src="_static/sponsors/pepr-origins.png" alt="France 2030, Programme de recherche Origines logo">
+                        </a>
+                        <h4><a href="https://pepr-origins.fr/" target="_blank" rel="noopener">PEPR Origins</a></h4>
+                        <p>Work package 5.1 of the Programme et équipements prioritaires de recherche Origins (PI: A. Morbidelli), part of France 2030.</p>
+                    </div>
+                    <div class="sponsor-tile">
+                        <a href="https://www.space-coe.eu/" class="sponsor-logo-plate" target="_blank" rel="noopener">
+                            <img src="_static/sponsors/space.png" alt="SPACE Centre of Excellence logo">
+                        </a>
+                        <h4><a href="https://www.space-coe.eu/" target="_blank" rel="noopener">SPACE Centre of Excellence</a></h4>
+                        <p>Scalable Parallel and distributed Astrophysical Codes for Exascale, funded by the EuroHPC Joint Undertaking.</p>
+                        <ul class="sponsor-grants">
+                            <li><a href="https://cordis.europa.eu/project/id/101093441" target="_blank" rel="noopener">SPACE</a> <span>No 101093441</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sponsor-group">
+                <h3 class="sponsor-group-title">Institutions</h3>
+                <div class="sponsor-grid">
+                    <div class="sponsor-tile">
+                        <a href="https://cral.univ-lyon1.fr/" class="sponsor-logo-plate" target="_blank" rel="noopener">
+                            <img src="_static/sponsors/cral.png" alt="CRAL logo">
+                        </a>
+                        <h4><a href="https://cral.univ-lyon1.fr/" target="_blank" rel="noopener">CRAL</a></h4>
+                        <p>Centre de Recherche Astrophysique de Lyon</p>
+                    </div>
+                    <div class="sponsor-tile">
+                        <a href="https://www.ens-lyon.fr/" class="sponsor-logo-plate" target="_blank" rel="noopener">
+                            <img src="_static/sponsors/udl-ens-lyon.png" alt="Université de Lyon and ENS de Lyon logo">
+                        </a>
+                        <h4><a href="https://www.ens-lyon.fr/" target="_blank" rel="noopener">ENS de Lyon</a></h4>
+                        <p>École normale supérieure de Lyon</p>
+                    </div>
+                    <div class="sponsor-tile">
+                        <a href="https://ipag.osug.fr/" class="sponsor-logo-plate" target="_blank" rel="noopener">
+                            <img src="_static/sponsors/ipag.png" alt="IPAG logo">
+                            <img src="_static/sponsors/uga.svg" alt="Université Grenoble Alpes logo">
+                        </a>
+                        <h4><a href="https://ipag.osug.fr/" target="_blank" rel="noopener">IPAG</a></h4>
+                        <p>Institut de Planétologie et d'Astrophysique de Grenoble, <a href="https://www.univ-grenoble-alpes.fr/" target="_blank" rel="noopener">Université Grenoble Alpes</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sponsor-group">
+                <h3 class="sponsor-group-title">Community tools</h3>
+                <div class="sponsor-grid sponsor-grid-single">
+                    <div class="sponsor-tile">
+                        <a href="https://zulip.com/" class="sponsor-logo-plate" target="_blank" rel="noopener">
+                            <img src="_static/sponsors/zulip-icon-circle.svg" alt="Zulip logo">
+                        </a>
+                        <h4><a href="https://zulip.com/" target="_blank" rel="noopener">Zulip</a></h4>
+                        <p>Zulip is an organized team chat app designed for efficient communication.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -287,6 +412,9 @@
                         </a>
                         <a href="https://discord.gg/Q69s5buyr5" aria-label="Discord">
                             <i class="fab fa-discord"></i>
+                        </a>
+                        <a href="https://shamrock-code.zulipchat.com" aria-label="Zulip">
+                            <img src="_static/sponsors/zulip-icon-circle.svg" alt="Zulip" class="social-icon-img">
                         </a>
                     </div>
                 </div>

@@ -1317,3 +1317,207 @@ body.loaded {
         padding: 2rem 0;
     }
 } 
+/* Image icons (logos not available in Font Awesome) */
+.community-card-img {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: block;
+    margin: 0 auto var(--spacing-md);
+}
+
+.social-icon-img {
+    width: 22px;
+    height: 22px;
+}
+
+/* Board Section */
+.board {
+    padding: var(--spacing-2xl) 0;
+    background: var(--light-gray);
+}
+
+.board-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.board-group {
+    background: var(--white);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-lg);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    min-width: 0;
+}
+
+.board-group-title {
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--primary-purple);
+    margin-bottom: var(--spacing-sm);
+}
+
+.board-members {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.board-members li {
+    font-size: var(--font-size-lg);
+    font-weight: 500;
+    color: var(--dark-gray);
+}
+
+.board-members a {
+    color: var(--dark-gray);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.board-members a i {
+    font-size: 0.7em;
+    color: var(--gray);
+    margin-left: 0.25rem;
+    vertical-align: 0.1em;
+}
+
+.board-members a:hover,
+.board-members a:hover i {
+    color: var(--primary-purple);
+}
+
+/* Sponsors Section */
+.sponsors {
+    padding: var(--spacing-2xl) 0;
+    background: var(--white);
+}
+
+.sponsors .section-title {
+    margin-bottom: var(--spacing-md);
+}
+
+.sponsors-intro {
+    text-align: center;
+    color: var(--gray);
+    max-width: 600px;
+    margin: 0 auto var(--spacing-xl);
+    line-height: 1.6;
+}
+
+.sponsor-group + .sponsor-group {
+    margin-top: var(--spacing-xl);
+}
+
+.sponsor-group-title {
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--primary-purple);
+    margin-bottom: var(--spacing-sm);
+}
+
+.sponsor-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.sponsor-grid-single {
+    grid-template-columns: minmax(0, 380px);
+}
+
+.sponsor-tile {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    min-width: 0;
+    background: var(--white);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius-lg);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    transition: var(--transition);
+}
+
+.sponsor-tile:hover {
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-purple);
+}
+
+.sponsor-logo-plate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    height: 96px;
+    margin-bottom: var(--spacing-xs);
+    padding: var(--spacing-xs);
+    background: var(--white);
+}
+
+.sponsor-logo-plate img {
+    max-height: 72px;
+    max-width: 100%;
+    min-width: 0;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+.sponsor-tile h4 {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+}
+
+.sponsor-tile h4 a {
+    color: var(--dark-gray);
+    text-decoration: none;
+}
+
+.sponsor-tile h4 a:hover {
+    color: var(--primary-purple);
+}
+
+.sponsor-tile p {
+    color: var(--gray);
+    font-size: var(--font-size-sm);
+    line-height: 1.6;
+}
+
+.sponsor-tile p a {
+    color: inherit;
+    text-underline-offset: 2px;
+}
+
+.sponsor-grants {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin-top: var(--spacing-xs);
+    padding-top: var(--spacing-xs);
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    font-size: var(--font-size-sm);
+}
+
+.sponsor-grants li {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--spacing-sm);
+    flex-wrap: wrap;
+}
+
+.sponsor-grants a {
+    color: var(--primary-purple);
+    font-weight: 500;
+    text-underline-offset: 2px;
+}
+
+.sponsor-grants span {
+    color: var(--gray);
+    font-variant-numeric: tabular-nums;
+}
